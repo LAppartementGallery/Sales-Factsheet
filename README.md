@@ -34,9 +34,23 @@ No build step, no dependencies. It is plain HTML + CSS.
    Use high-resolution photographs (min. 2000 px on the long edge). 2D works
    detoured to white; 3D works keep their studio background.
 4. **Page 2.** Edit the `Provenance` entries (institutions wrapped in
-   `<strong>`) and the `Current Location of the Artwork` line.
-5. **More image pages.** Duplicate a `.page` section and drop in placeholders
-   or images. Every page keeps the footer; the gold logo stays on page 1 only.
+   `<strong>`) and the `Current Location of the Artwork` line. Text and the
+   optional supporting image are aligned to the left margin.
+5. **More image pages.** Page 3 is an *image-only* page (`.content--plate`,
+   one image centred). Duplicate that whole `<section>` for each extra view,
+   or delete it if there are none. Every page keeps the footer; the gold logo
+   stays on page 1 only.
+
+---
+
+## Intake — what to collect per work
+
+To produce a factsheet, gather these and the rest is layout:
+
+- **Fiche** — artist, title, year, medium, dimensions (cm + in), price + currency.
+- **Provenance** — ordered list; gallery / institution names set bold.
+- **Current location** — freeport / storage address.
+- **Images** — main work image (HD) + any supporting views (each its own page).
 
 ---
 

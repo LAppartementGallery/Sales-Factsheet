@@ -80,6 +80,12 @@ html, body {
 .content--work .fs-figure img { max-height: 140mm; }
 .content--work .fs-fiche { width: 100mm; margin: 5mm auto auto; }
 
+/* Image-only page — single view, centred both axes */
+.content--plate { align-items: center; justify-content: center; }
+.content--plate .fs-figure,
+.content--plate .fs-placeholder { width: 100%; max-width: 150mm; max-height: 100%; margin: auto; }
+.content--plate .fs-figure img { max-height: 215mm; }
+
 /* ---- Page 1 header: gold lockup ---------------------------------------- */
 .fs-logo { width: 62mm; height: auto; display: block; margin: 0 auto; }
 .fs-logo svg { width: 100%; height: auto; display: block; }
