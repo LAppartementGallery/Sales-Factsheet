@@ -1,0 +1,186 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": [
+          {
+            "group": [
+              "ui_kits/presentation/**",
+              "ui_kits/presentation/components/**",
+              "ui_kits/presentation/data/**",
+              "ui_kits/presentation/pages/**"
+            ],
+            "message": "Import design-system components from 'index.js', not component internals."
+          }
+        ]
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter|Ivy Mode))/i]",
+        "message": "Font not provided by the design system. Available: Inter, Ivy Mode."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--accent-color",
+      "--accent-text-color",
+      "--color-bg",
+      "--color-cover-fallback",
+      "--color-fg",
+      "--color-fg-caption",
+      "--color-fg-soft",
+      "--font-body",
+      "--font-display",
+      "--font-ornament",
+      "--fw-bold",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--inset-name",
+      "--inset-text",
+      "--la-beige",
+      "--la-black",
+      "--la-cover-fb",
+      "--la-grey-caption",
+      "--la-white",
+      "--lh-body",
+      "--lh-detail",
+      "--lh-fiche",
+      "--lh-italic-cap",
+      "--lh-name",
+      "--lh-note",
+      "--lh-quote",
+      "--lh-quote-mark",
+      "--lh-tight",
+      "--page-h",
+      "--page-margin",
+      "--page-margin-l",
+      "--page-w",
+      "--quote-bg",
+      "--quote-fg",
+      "--t-bio",
+      "--t-bio-name",
+      "--t-closeup-cap",
+      "--t-cover-name",
+      "--t-cover-work",
+      "--t-disclaimer",
+      "--t-entry",
+      "--t-ex-caption",
+      "--t-fiche-artist",
+      "--t-fiche-meta",
+      "--t-fiche-price",
+      "--t-fiche-title",
+      "--t-note",
+      "--t-quote-mark",
+      "--t-quote-text",
+      "--t-section-h",
+      "--tr-caps-hard",
+      "--tr-caps-soft",
+      "--tr-display",
+      "--tr-fiche",
+      "--tr-fiche-tt",
+      "--tr-sig",
+      "--tr-tight"
+    ],
+    "tokenKinds": {
+      "--la-black": "color",
+      "--la-white": "color",
+      "--la-cover-fb": "color",
+      "--la-beige": "color",
+      "--la-grey-caption": "color",
+      "--color-fg": "color",
+      "--color-bg": "color",
+      "--color-fg-soft": "color",
+      "--color-fg-caption": "color",
+      "--color-cover-fallback": "color",
+      "--accent-color": "color",
+      "--accent-text-color": "font",
+      "--quote-bg": "color",
+      "--quote-fg": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--font-ornament": "font",
+      "--fw-light": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--fw-semibold": "font",
+      "--fw-bold": "font",
+      "--t-quote-mark": "font",
+      "--t-bio-name": "font",
+      "--t-cover-name": "font",
+      "--t-quote-text": "font",
+      "--t-fiche-artist": "font",
+      "--t-note": "font",
+      "--t-bio": "font",
+      "--t-fiche-title": "font",
+      "--t-section-h": "font",
+      "--t-fiche-meta": "font",
+      "--t-fiche-price": "font",
+      "--t-closeup-cap": "font",
+      "--t-entry": "font",
+      "--t-disclaimer": "font",
+      "--t-cover-work": "font",
+      "--t-ex-caption": "font",
+      "--tr-tight": "font",
+      "--tr-display": "font",
+      "--tr-fiche": "font",
+      "--tr-fiche-tt": "font",
+      "--tr-caps-soft": "font",
+      "--tr-caps-hard": "font",
+      "--tr-sig": "font",
+      "--lh-quote-mark": "font",
+      "--lh-quote": "font",
+      "--lh-tight": "font",
+      "--lh-fiche": "font",
+      "--lh-detail": "font",
+      "--lh-italic-cap": "font",
+      "--lh-body": "font",
+      "--lh-note": "font",
+      "--lh-name": "font",
+      "--page-w": "spacing",
+      "--page-h": "spacing",
+      "--page-margin": "spacing",
+      "--page-margin-l": "spacing",
+      "--inset-text": "spacing",
+      "--inset-name": "spacing"
+    },
+    "fontFamilies": [
+      "Inter",
+      "Ivy Mode"
+    ]
+  }
+}
