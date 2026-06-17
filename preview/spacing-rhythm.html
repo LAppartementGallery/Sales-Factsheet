@@ -1,0 +1,43 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Type rhythm" subtitle="Hierarchy from space, not size · leading scale 1.15–1.6" viewport="700x230" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spacing — Type rhythm</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #fafaf8; font-family: 'Inter', system-ui, sans-serif; color: #010101; }
+  .card { width: 700px; padding: 26px 32px 30px; box-sizing: border-box; display: grid; grid-template-columns: 1fr 1fr; gap: 30px; }
+  .lbl-h { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a847d; font-weight: 500; margin-bottom: 12px; }
+  .fiche .artist { font-size: 16px; font-weight: 300; letter-spacing: 0.01em; line-height: 1.15; }
+  .fiche .title { font-size: 13px; font-style: italic; font-weight: 300; margin-top: 7px; }
+  .fiche .meta { font-size: 12px; font-weight: 300; line-height: 1.5; margin-top: 7px; }
+  .fiche .price { font-size: 12px; font-weight: 500; margin-top: 16px; }
+  table { border-collapse: collapse; font-size: 11px; }
+  td { padding: 6px 0; border-bottom: 1px solid #ece8e0; }
+  td:first-child { padding-right: 18px; color: #5a5651; font-variant-numeric: tabular-nums; width: 70px; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div>
+    <div class="lbl-h">Fiche · spacing, not size, makes the breaks</div>
+    <div class="fiche">
+      <div class="artist">Danielle Mckinney</div>
+      <div class="title">Tell Me More, 2021</div>
+      <div class="meta">Acrylic on canvas<br>61 × 45.7 cm</div>
+      <div class="price">Price (excl. VAT): 400&rsquo;000 USD</div>
+    </div>
+  </div>
+  <div>
+    <div class="lbl-h">Leading</div>
+    <table>
+      <tr><td>1.15</td><td>Artist line · page-2 headings</td></tr>
+      <tr><td>1.40</td><td>Italic work title</td></tr>
+      <tr><td>1.50</td><td>Meta · provenance entries</td></tr>
+      <tr><td>1.60</td><td>Placeholder note</td></tr>
+    </table>
+  </div>
+</div>
+</body>
+</html>

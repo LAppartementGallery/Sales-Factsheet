@@ -1,0 +1,26 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="Tracking" subtitle="Body 0.01em · price 0.005em · footer caps 0.04em · placeholder 0.26em" viewport="700x250" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spacing — Tracking</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #fafaf8; font-family: 'Inter', system-ui, sans-serif; color: #010101; }
+  .card { width: 700px; padding: 22px 32px 26px; box-sizing: border-box; }
+  .row { display: grid; grid-template-columns: 80px 1fr 170px; gap: 14px; padding: 10px 0; border-bottom: 1px solid #ece8e0; align-items: baseline; }
+  .row:last-child { border-bottom: none; }
+  .v { font-variant-numeric: tabular-nums; font-size: 11px; color: #5a5651; }
+  .s { font-size: 15px; }
+  .n { font-size: 10px; letter-spacing: 0.06em; text-transform: uppercase; color: #8a847d; font-weight: 500; text-align: right; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row"><span class="v">0.005em</span><span class="s" style="letter-spacing:0.005em; font-weight:500">400&rsquo;000 USD</span><span class="n">Price line</span></div>
+  <div class="row"><span class="v">0.01em</span><span class="s" style="letter-spacing:0.01em; font-weight:300">Danielle Mckinney</span><span class="n">Artist · title · entries</span></div>
+  <div class="row"><span class="v">0.04em</span><span class="s" style="letter-spacing:0.04em; font-weight:500; font-size:12px; text-transform:uppercase; color:#ae956a">L&rsquo;Appartement</span><span class="n">Footer org · caps</span></div>
+  <div class="row"><span class="v">0.26em</span><span class="s" style="letter-spacing:0.26em; font-weight:600; font-size:11px; text-transform:uppercase; color:#9a948b">Additional View</span><span class="n">Placeholder title · caps</span></div>
+</div>
+</body>
+</html>

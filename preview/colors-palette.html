@@ -1,0 +1,39 @@
+<!doctype html>
+<!-- @dsCard group="Colors" name="Palette" subtitle="The entire system — black, white, and one gold flourish" viewport="700x230" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Colors — Palette</title>
+<link rel="stylesheet" href="../styles.css">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #fafaf8; font-family: 'Inter', system-ui, sans-serif; color: #010101; }
+  .card { width: 700px; padding: 26px 32px 30px; box-sizing: border-box; }
+  .row { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+  .sw { display: flex; flex-direction: column; gap: 9px; }
+  .chip { height: 76px; box-shadow: inset 0 0 0 1px rgba(1,1,1,.10); }
+  .meta { display: flex; flex-direction: column; gap: 2px; }
+  .nm { font-size: 11.5px; font-weight: 600; }
+  .hex { font-size: 11px; color: #5a5651; font-variant-numeric: tabular-nums; text-transform: uppercase; letter-spacing: 0.04em; }
+  .use { font-size: 10px; color: #8a847d; letter-spacing: 0.02em; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="row">
+    <div class="sw">
+      <div class="chip" style="background:#010101"></div>
+      <div class="meta"><span class="nm">Black</span><span class="hex">#010101</span><span class="use">All text &amp; titles</span></div>
+    </div>
+    <div class="sw">
+      <div class="chip" style="background:#ffffff"></div>
+      <div class="meta"><span class="nm">White</span><span class="hex">#FFFFFF</span><span class="use">Page background</span></div>
+    </div>
+    <div class="sw">
+      <div class="chip" style="background:#ae956a"></div>
+      <div class="meta"><span class="nm">Gold</span><span class="hex">#AE956A</span><span class="use">Lockup (pg 1) + footer</span></div>
+    </div>
+  </div>
+</div>
+</body>
+</html>

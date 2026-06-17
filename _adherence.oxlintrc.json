@@ -1,0 +1,131 @@
+{
+  "plugins": [
+    "react",
+    "import"
+  ],
+  "rules": {
+    "react/forbid-elements": [
+      "warn",
+      {
+        "forbid": []
+      }
+    ],
+    "no-restricted-imports": [
+      "warn",
+      {
+        "patterns": []
+      }
+    ],
+    "no-restricted-syntax": [
+      "warn",
+      {
+        "selector": "Literal[value=/#[0-9a-fA-F]{3,8}\\b/]",
+        "message": "Raw hex color — use a design-system color token via var()."
+      },
+      {
+        "selector": "Literal[value=/\\b\\d+px\\b/]",
+        "message": "Raw px value — use a design-system spacing token via var()."
+      },
+      {
+        "selector": "Literal[value=/font-family\\s*:\\s*(?!['\\\"]?(?:Inter))/i]",
+        "message": "Font not provided by the design system. Available: Inter."
+      }
+    ]
+  },
+  "overrides": [
+    {
+      "files": [
+        "**/index.js"
+      ],
+      "rules": {
+        "no-restricted-imports": "off"
+      }
+    }
+  ],
+  "x-omelette": {
+    "components": {},
+    "tokens": [
+      "--color-bg",
+      "--color-brand",
+      "--color-fg",
+      "--font-body",
+      "--font-display",
+      "--fs-black",
+      "--fs-gold",
+      "--fs-ph-bg",
+      "--fs-ph-fg",
+      "--fs-ph-line",
+      "--fs-white",
+      "--fw-light",
+      "--fw-medium",
+      "--fw-regular",
+      "--fw-semibold",
+      "--lh-body",
+      "--lh-fiche",
+      "--lh-footer",
+      "--lh-tight",
+      "--lh-title",
+      "--page-fig-w",
+      "--page-foot-h",
+      "--page-h",
+      "--page-margin",
+      "--page-plate-w",
+      "--page-w",
+      "--t-artist",
+      "--t-entry",
+      "--t-footer",
+      "--t-meta",
+      "--t-ph-note",
+      "--t-ph-title",
+      "--t-price",
+      "--t-title",
+      "--tr-body",
+      "--tr-footer",
+      "--tr-ph",
+      "--tr-price"
+    ],
+    "tokenKinds": {
+      "--fs-black": "color",
+      "--fs-white": "color",
+      "--fs-gold": "color",
+      "--fs-ph-bg": "color",
+      "--fs-ph-fg": "color",
+      "--fs-ph-line": "color",
+      "--color-fg": "color",
+      "--color-bg": "color",
+      "--color-brand": "color",
+      "--font-display": "font",
+      "--font-body": "font",
+      "--fw-light": "font",
+      "--fw-regular": "font",
+      "--fw-medium": "font",
+      "--fw-semibold": "font",
+      "--t-artist": "font",
+      "--t-title": "font",
+      "--t-meta": "font",
+      "--t-price": "font",
+      "--t-entry": "font",
+      "--t-ph-title": "font",
+      "--t-ph-note": "font",
+      "--t-footer": "font",
+      "--tr-body": "font",
+      "--tr-price": "font",
+      "--tr-footer": "font",
+      "--tr-ph": "font",
+      "--lh-tight": "font",
+      "--lh-title": "font",
+      "--lh-fiche": "font",
+      "--lh-body": "font",
+      "--lh-footer": "font",
+      "--page-w": "spacing",
+      "--page-h": "spacing",
+      "--page-margin": "spacing",
+      "--page-foot-h": "spacing",
+      "--page-fig-w": "spacing",
+      "--page-plate-w": "spacing"
+    },
+    "fontFamilies": [
+      "Inter"
+    ]
+  }
+}

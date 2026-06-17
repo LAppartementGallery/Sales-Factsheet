@@ -1,0 +1,9 @@
+/* =============================================================================
+   L'APPARTEMENT — SALES FACTSHEET · global entry stylesheet
+   -----------------------------------------------------------------------------
+   Single import surface for consumers of the design system. Pulls in the full
+   type + colour foundation (Inter, tokens, semantic type rules) so a consuming
+   page only needs one link:  <link rel="stylesheet" href="styles.css">
+   ========================================================================== */
+
+@import url('./colors_and_type.css');

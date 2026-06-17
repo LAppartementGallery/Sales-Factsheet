@@ -1,0 +1,42 @@
+<!doctype html>
+<!-- @dsCard group="Spacing" name="A4 page & margins" subtitle="210 × 297 mm · 18 mm margin · 26 mm reserved footer band" viewport="700x290" -->
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Spacing — A4 page</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  html, body { margin: 0; background: #fafaf8; font-family: 'Inter', system-ui, sans-serif; color: #010101; }
+  .card { width: 700px; padding: 24px 32px 28px; box-sizing: border-box; display: grid; grid-template-columns: 200px 1fr; gap: 34px; align-items: center; }
+  .page {
+    width: 175px; aspect-ratio: 210 / 297;
+    background: #fff;
+    position: relative;
+    box-shadow: 0 0 0 1px #ece8e0;
+  }
+  .margin { position: absolute; inset: 6.1%; outline: 1px dashed #c9c2b6; } /* 18mm of 297mm ≈ 6% */
+  .foot { position: absolute; left: 6.1%; right: 6.1%; bottom: 6.1%; height: 8.8%; background: rgba(174,149,106,.14); } /* 26mm band */
+  .foot::after { content: 'footer band'; position: absolute; inset: 0; display: flex; align-items: center; justify-content: center; font-size: 7px; letter-spacing: 0.1em; text-transform: uppercase; color: #ae956a; }
+  .lbl-h { font-size: 10px; letter-spacing: 0.18em; text-transform: uppercase; color: #8a847d; font-weight: 500; margin-bottom: 12px; }
+  ul { margin: 0; padding-left: 16px; font-size: 11.5px; line-height: 1.7; color: #4a4641; }
+  ul strong { color: #010101; font-weight: 600; }
+</style>
+</head>
+<body>
+<div class="card">
+  <div class="page">
+    <div class="margin"></div>
+    <div class="foot"></div>
+  </div>
+  <div>
+    <div class="lbl-h">A4 portrait · 210 × 297 mm</div>
+    <ul>
+      <li>Uniform editorial margin <strong>18 mm</strong> on every page</li>
+      <li>Reserved footer band <strong>26 mm</strong> — the gold gallery footer sits here</li>
+      <li>Work + fiche column <strong>100 mm</strong>, centred</li>
+      <li>Image-only page max width <strong>150 mm</strong></li>
+    </ul>
+  </div>
+</div>
+</body>
+</html>

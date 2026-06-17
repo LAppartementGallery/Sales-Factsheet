@@ -1,0 +1,174 @@
+/* =============================================================================
+   L'APPARTEMENT — SALES FACTSHEET · colors_and_type.css
+   -----------------------------------------------------------------------------
+   The type + colour foundation for L'Appartement Gallery's single-work Sales
+   Factsheet — the print-ready A4 PDF sent to a buyer ahead of the invoice.
+   Editorial, fine-art, print-first.
+
+   One family does all the work:
+     Inter            — display + body (variable, SIL OFL, free)
+
+   The palette is intentionally tiny: pure black on pure white, with one brand
+   flourish — the gold L'Appartement lockup on page 1 and the gold gallery
+   footer on every page. No icons, no gradients, no decoration. Hierarchy
+   comes from type + space only.
+   ========================================================================= */
+
+/* ---- Fonts -------------------------------------------------------------- */
+
+/* Inter — display + body. Variable font (weights 100–900) loaded locally so
+   the factsheet renders the same in print and offline as on screen. */
+@font-face {
+  font-family: 'Inter';
+  src: url('./fonts/InterVariable.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+
+  /* ===========================================================
+     COLORS — the entire system palette
+     =========================================================== */
+
+  /* Base — pure values, no tints */
+  --fs-black:    #010101;   /* all text, all titles */
+  --fs-white:    #ffffff;   /* page background */
+  --fs-gold:     #ae956a;   /* L'Appartement lockup (page 1) + footer */
+
+  /* Image placeholders (shown until a real photograph is dropped in) */
+  --fs-ph-bg:    #e9e7e3;   /* placeholder fill */
+  --fs-ph-fg:    #9a948b;   /* placeholder instructions */
+  --fs-ph-line:  #d3cfc8;   /* placeholder dashed border */
+
+  /* Semantic — map intent to base */
+  --color-fg:    var(--fs-black);   /* text + titles */
+  --color-bg:    var(--fs-white);   /* page */
+  --color-brand: var(--fs-gold);    /* lockup + footer */
+
+
+  /* ===========================================================
+     TYPE — family, weights, scale
+     =========================================================== */
+
+  --font-display:  'Inter', 'Helvetica Neue', Arial, sans-serif;
+  --font-body:     'Inter', 'Helvetica Neue', Arial, sans-serif;
+
+  --fw-light:    300;   /* @kind font */   /* artist line, title, meta, entries */
+  --fw-regular:  400;   /* @kind font */   /* placeholder notes, footer rows */
+  --fw-medium:   500;   /* @kind font */   /* price line, footer org, bold institutions */
+  --fw-semibold: 600;   /* @kind font */   /* placeholder titles */
+
+  /* Scale — points are the source of truth (print-first).
+     px values are the screen equivalents at 96dpi (1pt ≈ 1.333px). */
+  --t-artist:    12pt;   /* @kind font */   /* artist line on the fiche + page-2 headings */
+  --t-title:     9.5pt;  /* @kind font */   /* italic work title, year */
+  --t-meta:      9pt;    /* @kind font */   /* medium + dimensions */
+  --t-price:     9pt;    /* @kind font */   /* price line */
+  --t-entry:     9pt;    /* @kind font */   /* provenance / location entries */
+  --t-ph-title:  9pt;    /* @kind font */   /* image-placeholder label */
+  --t-ph-note:   8pt;    /* @kind font */   /* image-placeholder note */
+  --t-footer:    6.5pt;  /* @kind font */   /* gold gallery footer */
+
+  /* Tracking */
+  --tr-body:      0.01em;   /* @kind font */   /* artist line, title, entries */
+  --tr-price:     0.005em;  /* @kind font */   /* price line */
+  --tr-footer:    0.04em;   /* @kind font */   /* footer org line (caps) */
+  --tr-ph:        0.26em;   /* @kind font */   /* placeholder title (caps) */
+
+  /* Leading */
+  --lh-tight:    1.15;   /* @kind font */   /* artist line, page-2 headings */
+  --lh-title:    1.4;    /* @kind font */   /* italic title */
+  --lh-fiche:    1.5;    /* @kind font */   /* meta + entries */
+  --lh-body:     1.6;    /* @kind font */   /* placeholder note */
+  --lh-footer:   1.4;    /* @kind font */   /* footer rows */
+
+
+  /* ===========================================================
+     LAYOUT — A4 + editorial rhythm
+     =========================================================== */
+  --page-w:        210mm;   /* @kind spacing */
+  --page-h:        297mm;   /* @kind spacing */
+  --page-margin:    18mm;   /* @kind spacing */   /* editorial margin */
+  --page-foot-h:    26mm;   /* @kind spacing */   /* reserved footer band */
+  --page-fig-w:    100mm;   /* @kind spacing */   /* work + fiche column width */
+  --page-plate-w:  150mm;   /* @kind spacing */   /* image-only page max width */
+
+}
+
+/* =============================================================================
+   SEMANTIC TYPE RULES
+   Reusable classes mirroring the factsheet's own .fs-* layout, for consumers
+   that build pages directly against this stylesheet.
+   ============================================================================= */
+
+html, body {
+  font-family: var(--font-body);
+  font-weight: var(--fw-regular);
+  color: var(--color-fg);
+  background: var(--color-bg);
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+
+/* Artist line — the largest line on the fiche, and page-2 section headings */
+.la-artist {
+  font-family: var(--font-display);
+  font-size: var(--t-artist);
+  font-weight: var(--fw-light);
+  letter-spacing: var(--tr-body);
+  line-height: var(--lh-tight);
+}
+
+/* Work title — italic, year inline */
+.la-title {
+  font-family: var(--font-body);
+  font-size: var(--t-title);
+  font-style: italic;
+  font-weight: var(--fw-light);
+  line-height: var(--lh-title);
+}
+
+/* Meta — medium + dimensions, one weight, hierarchy from spacing only */
+.la-meta {
+  font-family: var(--font-body);
+  font-size: var(--t-meta);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-fiche);
+}
+
+/* Price — the one line set a notch heavier */
+.la-price {
+  font-family: var(--font-body);
+  font-size: var(--t-price);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tr-price);
+}
+
+/* Provenance / location entries — bold institution names via <strong> */
+.la-entry {
+  font-family: var(--font-body);
+  font-size: var(--t-entry);
+  font-weight: var(--fw-light);
+  line-height: var(--lh-fiche);
+}
+.la-entry strong { font-weight: var(--fw-medium); }
+
+/* Gold gallery footer */
+.la-footer-org {
+  font-family: var(--font-display);
+  font-size: var(--t-footer);
+  font-weight: var(--fw-medium);
+  letter-spacing: var(--tr-footer);
+  text-transform: uppercase;
+  color: var(--color-brand);
+}
+.la-footer-row {
+  font-family: var(--font-body);
+  font-size: var(--t-footer);
+  font-weight: var(--fw-regular);
+  line-height: var(--lh-footer);
+  letter-spacing: var(--tr-body);
+  color: var(--color-brand);
+}
